@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTOFOLIO</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 6s linear infinite;
+}
+</style>
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgDark: "#080808",
+            secondDark: "#1b0000",
+            mainRed: "#f60b0b"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-bgDark text-white scroll-smooth">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full px-[12%] py-6 bg-black/30 backdrop-blur-md z-50">
+
+  <div class="flex justify-between items-center">
+
+    <a href="#home" class="text-3xl font-extrabold text-mainRed">
+      Naufallnfff_
+    </a>
+
+    <!-- HAMBURGER -->
+    <i class="bx bx-menu text-4xl text-mainRed md:hidden cursor-pointer"
+       id="menu-icon"></i>
+
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex space-x-10 text-lg">
+      <a href="#home" class="hover:text-mainRed">Home</a>
+      <a href="#about" class="hover:text-mainRed">About</a>
+      <a href="#projects" class="hover:text-mainRed">Projects</a>
+      <a href="#education" class="hover:text-mainred">Education</a>
+      <a href="#skills" class="hover:text-mainRed">Skills</a>
+      <a href="#contact" class="hover:text-mainRed">Contact</a>
+    </nav>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <nav id="mobile-menu"
+       class="hidden flex-col mt-6 space-y-6 text-center text-lg md:hidden">
+
+    <a href="#home" class="block hover:text-mainRed">Home</a>
+    <a href="#about" class="block hover:text-mainRed">About</a>
+    <a href="#projects" class="block hover:text-mainRed">Projects</a>
+    <a href="#education" class="block hover:text-mainRed">Education</a>
+    <a href="#skills" class="block hover:text-mainRed">Skills</a>
+    <a href="#contact" class="block hover:text-mainRed">Contact</a>
+
+  </nav>
+
+</header>
+
+<!-- HOME SECTION - PROFESSIONAL -->
+<section id="home" class="relative min-h-screen flex flex-col items-center justify-center text-center px-[8%] md:px-[12%] pt-28 overflow-hidden">
+
+  <!-- Soft Background Glow -->
+  <div class="absolute top-0 w-[600px] h-[600px] bg-mainRed/5 blur-[150px] rounded-full"></div>
+
+  <!-- FOTO PALING ATAS -->
+  <div class="relative flex justify-center mb-10">
+
+    <!-- Glow -->
+    <div class="absolute w-[380px] h-[380px] bg-mainRed/10 rounded-full blur-[120px]"></div>
+
+    <!-- Elegant Ring -->
+    <div class="absolute w-[330px] h-[330px] rounded-full border border-mainRed/30"></div>
+
+    <img src="images/naufall.jpeg"
+         alt="Naufal Photo"
+         class="relative w-[280px] h-[280px] object-cover rounded-full
+                border-4 border-mainRed
+                shadow-[0_0_40px_rgba(255,0,0,0.25)]
+                hover:scale-105 hover:shadow-[0_0_60px_rgba(255,0,0,0.4)]
+                transition duration-500">
+  </div>
+
+  <!-- PROFESSION LABEL -->
+  <p class="uppercase tracking-[0.4em] text-mainRed text-sm font-medium mb-6">
+    Frontend Developer
+  </p>
+
+  <!-- MAIN TITLE -->
+  <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+    Hi, I'm <span class="text-mainRed">Naufal</span>
+  </h1>
+
+  <!-- SUB TITLE -->
+  <h2 class="text-xl md:text-3xl text-gray-300 font-medium mb-6">
+    I build modern & responsive websites
+  </h2>
+
+  <!-- DESCRIPTION -->
+  <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mb-10">
+    Saya membuat website modern dengan desain clean, performa optimal,
+    dan pengalaman pengguna yang nyaman. Fokus pada detail, kualitas,
+    dan tampilan profesional.
+  </p>
+
+  <!-- BUTTONS -->
+  <div class="flex flex-col sm:flex-row gap-5">
+
+    <a href="#projects"
+       class="px-10 py-3 bg-mainRed text-black rounded-full font-semibold
+              hover:scale-105 hover:shadow-[0_0_25px_rgba(255,0,0,0.4)]
+              transition duration-300">
+      View Projects
+    </a>
+
+    <a href="#contact"
+       class="px-10 py-3 border border-white/20 text-white rounded-full font-semibold
+              hover:border-mainRed hover:text-mainRed transition duration-300">
+      Contact Me
+    </a>
+
+  </div>
+
+</section>
+
+</section>
+
+<!-- ABOUT PROFESSIONAL -->
+<section id="about" class="relative min-h-screen flex items-center justify-center px-[8%] md:px-[12%] py-24 bg-gradient-to-b from-secondDark to-black overflow-hidden">
+
+  <!-- Background Accent -->
+  <div class="absolute top-20 left-10 w-72 h-72 bg-mainRed/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-72 h-72 bg-mainRed/10 blur-3xl rounded-full"></div>
+
+  <div class="relative max-w-6xl w-full grid md:grid-cols-2 gap-20 items-center">
+
+    <!-- FOTO SECTION -->
+    <div class="relative flex justify-center">
+
+      <!-- Elegant Frame -->
+      <div class="absolute w-80 h-80 border-2 border-mainRed/30 rounded-3xl rotate-6"></div>
+
+      <!-- Image -->
+      <img src="images/naufal.jpeg"
+        alt="Foto Naufal"
+        class="relative w-72 md:w-80 aspect-square object-cover rounded-3xl 
+               border border-mainRed/40 
+               shadow-[0_0_40px_rgba(246,11,11,0.3)]
+               hover:scale-105 transition duration-500">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="space-y-8 text-center md:text-left">
+
+      <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+        About <span class="text-mainRed">Me</span>
+      </h2>
+
+      <div class="w-20 h-1 bg-mainRed mx-auto md:mx-0 rounded-full"></div>
+
+      <p class="text-lg text-gray-300 leading-relaxed max-w-xl">
+        Saya adalah seorang <span class="text-mainRed font-semibold">Frontend Developer</span> 
+        yang berfokus pada pengembangan website modern, clean, dan interaktif. 
+        Saya mengutamakan performa, pengalaman pengguna, serta detail visual 
+        untuk menciptakan produk digital yang profesional dan berkualitas.
+      </p>
+
+      <!-- INFO CARDS -->
+      <div class="grid grid-cols-2 gap-6 mt-8">
+
+        <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 
+                    rounded-2xl p-6 text-center 
+                    hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(246,11,11,0.4)]
+                    transition duration-500">
+          <h3 class="text-3xl font-bold text-mainRed mb-2">1+</h3>
+          <p class="text-sm text-gray-400">Years Experience</p>
+        </div>
+
+        <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 
+                    rounded-2xl p-6 text-center 
+                    hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(246,11,11,0.4)]
+                    transition duration-500">
+          <h3 class="text-3xl font-bold text-mainRed mb-2">3+</h3>
+          <p class="text-sm text-gray-400">Projects Completed</p>
+        </div>
+
+      </div>
+
+      <!-- BUTTON -->
+      <div class="pt-6">
+        <a href="#contact"
+          class="inline-block px-10 py-3 bg-mainRed rounded-full 
+                 text-black font-semibold tracking-wide
+                 hover:scale-105 hover:shadow-[0_0_30px_rgba(246,11,11,0.6)]
+                 transition duration-300">
+          Let's Work Together
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="min-h-screen px-[8%] md:px-[12%] py-24 bg-gradient-to-b from-black to-secondDark">
+  
+  <!-- TITLE -->
+  <div class="text-center mb-20">
+    <h2 class="text-4xl md:text-5xl font-bold">
+      My <span class="text-mainRed">Projects</span>
+    </h2>
+    <p class="text-gray-400 mt-4 max-w-xl mx-auto text-sm md:text-base">
+      Beberapa project yang pernah saya kerjakan menggunakan HTML, Tailwind CSS dan JavaScript.
+    </p>
+  </div>
+
+  <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+  <!-- PROJECT 1 -->
+  <div class="group bg-black/40 border border-mainRed/30 rounded-2xl overflow-hidden 
+              hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(246,11,11,0.5)] 
+              transition duration-500">
+
+    <!-- IMAGE -->
+    <div class="p-3">
+      <div class="border border-mainRed/40 rounded-xl overflow-hidden">
+        <img src="images/projec.png" 
+             alt="Portfolio Website"
+             class="w-full h-52 object-cover group-hover:scale-105 transition duration-500">
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="p-6 space-y-4">
+      <h3 class="text-xl font-semibold">Portfolio Website</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Website portfolio modern dan responsive menggunakan HTML, Tailwind CSS & JavaScript.
+      </p>
+
+      <div class="flex gap-3 pt-4">
+        <a href="https://naufalnfff.github.io/portofolioo/" target="_blank"
+           class="flex-1 text-center py-2 bg-mainRed text-black rounded-lg text-sm font-medium hover:opacity-80 transition">
+          Live
+        </a>
+
+        <a href="https://github.com/naufalnfff/portofolioo-repository" target="_blank"
+           class="flex-1 text-center py-2 border border-mainRed text-mainRed rounded-lg text-sm font-medium hover:bg-mainRed hover:text-black transition">
+          Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PROJECT 2 -->
+  <div class="group bg-black/40 border border-mainRed/30 rounded-2xl overflow-hidden 
+              hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(246,11,11,0.5)] 
+              transition duration-500">
+
+    <div class="p-3">
+      <div class="border border-mainRed/40 rounded-xl overflow-hidden">
+        <img src="images/project2.png" 
+             alt="Landing Page"
+             class="w-full h-52 object-cover group-hover:scale-105 transition duration-500">
+      </div>
+    </div>
+
+    <div class="p-6 space-y-4">
+      <h3 class="text-xl font-semibold">Landing Page</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Desain landing page clean dan modern dengan animasi interaktif.
+      </p>
+
+      <div class="flex gap-3 pt-4">
+        <a href="#" 
+           class="flex-1 text-center py-2 bg-mainRed text-black rounded-lg text-sm font-medium hover:opacity-80 transition">
+          Live
+        </a>
+
+        <a href="#" 
+           class="flex-1 text-center py-2 border border-mainRed text-mainRed rounded-lg text-sm font-medium hover:bg-mainRed hover:text-black transition">
+          Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PROJECT 3 -->
+  <div class="group bg-black/40 border border-mainRed/30 rounded-2xl overflow-hidden 
+              hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(246,11,11,0.5)] 
+              transition duration-500">
+
+    <div class="p-3">
+      <div class="border border-mainRed/40 rounded-xl overflow-hidden">
+        <img src="images/project.png" 
+             alt="Dashboard UI"
+             class="w-full h-52 object-cover group-hover:scale-105 transition duration-500">
+      </div>
+    </div>
+
+    <div class="p-6 space-y-4">
+      <h3 class="text-xl font-semibold">Dashboard UI</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Tampilan dashboard interaktif dengan layout responsive dan clean UI.
+      </p>
+
+      <div class="flex gap-3 pt-4">
+        <a href="#" 
+           class="flex-1 text-center py-2 bg-mainRed text-black rounded-lg text-sm font-medium hover:opacity-80 transition">
+          Live
+        </a>
+
+        <a href="#" 
+           class="flex-1 text-center py-2 border border-mainRed text-mainRed rounded-lg text-sm font-medium hover:bg-mainRed hover:text-black transition">
+          Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="min-h-screen px-[8%] md:px-[12%] py-24 bg-secondDark">
+
+  <h2 class="text-4xl md:text-6xl font-bold text-center mb-16">
+    My <span class="text-mainRed">Education</span>
+  </h2>
+
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- MIN 2 BANJAR -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 rounded-3xl overflow-hidden hover:shadow-[0_0_40px_rgba(246,11,11,0.4)] transition duration-500">
+
+      <!-- IMAGE -->
+      <div class="p-4">
+        <div class="rounded-2xl border border-mainRed/40 p-2 bg-gradient-to-br from-mainRed/20 to-transparent">
+          <img 
+            src="images/mis2.png"
+            alt="MI 2 Banjar"
+            class="w-full h-52 object-cover rounded-xl group-hover:scale-105 transition duration-500"
+          >
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold mb-2">MI 2 Banjar</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Madrasah Ibtidaiyah 
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=MIN+2+Banjar"
+           target="_blank"
+           class="px-5 py-2 bg-mainRed rounded-full text-black font-semibold hover:scale-105 transition">
+          Lihat di Maps
+        </a>
+      </div>
+    </div>
+
+
+    <!-- SMPN 2 BANJAR -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 rounded-3xl overflow-hidden hover:shadow-[0_0_40px_rgba(246,11,11,0.4)] transition duration-500">
+
+      <div class="p-4">
+        <div class="rounded-2xl border border-mainRed/40 p-2 bg-gradient-to-br from-mainRed/20 to-transparent">
+          <img 
+            src="images/smpn2.png"
+            alt="SMPN 2 Banjar"
+            class="w-full h-52 object-cover rounded-xl group-hover:scale-105 transition duration-500"
+          >
+        </div>
+      </div>
+
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold mb-2">SMPN 2 Banjar</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Sekolah Menengah Pertama
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=SMPN+2+Banjar"
+           target="_blank"
+           class="px-5 py-2 border border-mainRed text-mainRed rounded-full hover:bg-mainRed hover:text-black transition">
+          Lihat di Maps
+        </a>
+      </div>
+    </div>
+
+
+    <!-- SMKN 1 BANJAR -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/40 rounded-3xl overflow-hidden hover:shadow-[0_0_60px_rgba(246,11,11,0.6)] transition duration-500 relative">
+
+      <span class="absolute top-4 right-4 text-xs bg-mainRed text-black px-3 py-1 rounded-full font-semibold">
+        Sekarang
+      </span>
+
+      <div class="p-4">
+        <div class="rounded-2xl border border-mainRed/50 p-2 bg-gradient-to-br from-mainRed/30 to-transparent">
+          <img 
+            src="images/smkn1.png"
+            alt="SMKN 1 Banjar"
+            class="w-full h-52 object-cover rounded-xl group-hover:scale-105 transition duration-500"
+          >
+        </div>
+      </div>
+
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold mb-2">SMKN 1 Banjar</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Sekolah Menengah Kejuruan
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=SMKN+1+Banjar"
+           target="_blank"
+           class="px-5 py-2 bg-mainRed rounded-full text-black font-semibold hover:scale-105 transition">
+          Lihat di Maps
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="min-h-screen px-[12%] py-24 bg-gradient-to-b from-secondDark to-black">
+
+  <h2 class="text-5xl md:text-6xl font-bold text-center mb-20">
+    My <span class="text-mainRed">Skills</span>
+  </h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+    <!-- HTML -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-[0_0_40px_#f60b0b] transition duration-500">
+      <i class='bx bxl-html5 text-5xl text-orange-500 mb-6'></i>
+      <h3 class="text-2xl font-bold mb-4">HTML</h3>
+      <p class="text-gray-400 leading-relaxed">
+        Mampu membuat struktur website yang semantik dan terorganisir dengan baik.
+        Memahami penggunaan elemen HTML5 untuk membangun layout yang rapi,
+        aksesibel, dan SEO-friendly.
+      </p>
+    </div>
+
+    <!-- CSS -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-[0_0_40px_#f60b0b] transition duration-500">
+      <i class='bx bxl-css3 text-5xl text-blue-500 mb-6'></i>
+      <h3 class="text-2xl font-bold mb-4">CSS</h3>
+      <p class="text-gray-400 leading-relaxed">
+        Berpengalaman dalam membuat tampilan modern dan responsive.
+        Menggunakan Flexbox, Grid, serta framework seperti Tailwind CSS
+        untuk menciptakan desain yang clean dan elegan.
+      </p>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-[0_0_40px_#f60b0b] transition duration-500">
+      <i class='bx bxl-javascript text-5xl text-yellow-400 mb-6'></i>
+      <h3 class="text-2xl font-bold mb-4">JavaScript</h3>
+      <p class="text-gray-400 leading-relaxed">
+        Mampu membangun interaksi dinamis pada website seperti animasi,
+        manipulasi DOM, dan fitur interaktif lainnya untuk meningkatkan
+        pengalaman pengguna.
+      </p>
+    </div>
+
+    <!-- Git -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-[0_0_40px_#f60b0b] transition duration-500">
+      <i class='bx bxl-git text-5xl text-red-500 mb-6'></i>
+      <h3 class="text-2xl font-bold mb-4">Git</h3>
+      <p class="text-gray-400 leading-relaxed">
+        Menggunakan Git untuk version control dan kolaborasi tim.
+        Terbiasa mengelola repository, branching, serta deployment
+        project ke GitHub.
+      </p>
+    </div>
+
+    <!-- Flutter -->
+    <div class="group bg-black/40 backdrop-blur-lg border border-mainRed/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-[0_0_40px_#f60b0b] transition duration-500 md:col-span-2 lg:col-span-1">
+      <i class='bx bxl-flutter text-5xl text-cyan-400 mb-6'></i>
+      <h3 class="text-2xl font-bold mb-4">Flutter</h3>
+      <p class="text-gray-400 leading-relaxed">
+        Mampu membangun aplikasi mobile cross-platform menggunakan Flutter.
+        Memahami konsep widget, state management dasar, serta integrasi API.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT - PREMIUM VERSION -->
+<section id="contact" class="relative min-h-screen px-[8%] md:px-[12%] py-28 flex items-center overflow-hidden">
+
+  <!-- Soft Background Gradient Glow -->
+  <div class="absolute left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-mainRed/5 blur-[180px] rounded-full"></div>
+
+  <div class="relative w-full max-w-6xl mx-auto">
+
+    <!-- TITLE -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-6xl font-bold">
+        Let’s Build Something <span class="text-mainRed">Great</span>
+      </h2>
+      <p class="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
+        Punya ide atau project? Saya siap membantu mewujudkan
+        website modern dengan tampilan profesional dan performa maksimal.
+      </p>
+    </div>
+
+    <!-- CONTACT CARD -->
+    <div class="grid md:grid-cols-2 gap-14 items-center
+                bg-black/40 backdrop-blur-2xl
+                border border-white/10
+                rounded-3xl p-10 md:p-14">
+
+      <!-- LEFT INFO -->
+      <div class="space-y-8">
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-3">Contact Information</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Terbuka untuk freelance, kolaborasi, atau project jangka panjang.
+            Silakan hubungi saya melalui form atau informasi di bawah ini.
+          </p>
+        </div>
+
+        <div class="space-y-4 text-gray-300">
+
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-mainRed/20 text-mainRed">
+              ✉
+            </div>
+            <span>Naufalnurulfajar458@email.com</span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-mainRed/20 text-mainRed">
+              📍
+            </div>
+            <span>Jawa Barat, Banjar Vest Java</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <form class="space-y-6">
+
+        <input type="text"
+          placeholder="Full Name"
+          class="w-full p-4 bg-transparent border border-white/10 rounded-xl
+                 focus:border-mainRed focus:ring-1 focus:ring-mainRed
+                 transition duration-300 outline-none">
+
+        <input type="email"
+          placeholder="Email Address"
+          class="w-full p-4 bg-transparent border border-white/10 rounded-xl
+                 focus:border-mainRed focus:ring-1 focus:ring-mainRed
+                 transition duration-300 outline-none">
+
+        <textarea rows="5"
+          placeholder="Your Message"
+          class="w-full p-4 bg-transparent border border-white/10 rounded-xl
+                 focus:border-mainRed focus:ring-1 focus:ring-mainRed
+                 transition duration-300 outline-none"></textarea>
+
+        <button type="submit"
+          class="w-full py-4 bg-mainRed text-black font-semibold rounded-xl
+                 hover:scale-[1.02]
+                 hover:shadow-[0_0_30px_rgba(255,0,0,0.35)]
+                 transition duration-300">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER - PREMIUM -->
+<footer class="relative bg-black border-t border-white/10 pt-20 pb-10 overflow-hidden">
+
+  <!-- Soft Red Glow -->
+  <div class="absolute left-1/2 -translate-x-1/2 top-0 w-[700px] h-[400px] bg-mainRed/5 blur-[150px] rounded-full"></div>
+
+  <div class="relative max-w-6xl mx-auto px-[8%] md:px-[12%]">
+
+    <!-- TOP SECTION -->
+    <div class="grid md:grid-cols-3 gap-12 text-center md:text-left items-center">
+
+      <!-- BRAND -->
+      <div class="space-y-4">
+        <h3 class="text-3xl font-bold text-mainRed tracking-wide">
+          Naufallnfff_
+        </h3>
+        <p class="text-gray-400 leading-relaxed text-sm max-w-sm mx-auto md:mx-0">
+          Frontend Developer yang fokus membangun website modern,
+          responsive, dan profesional dengan performa optimal.
+        </p>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="space-y-4">
+        <h4 class="text-white font-semibold tracking-wide">
+          Quick Links
+        </h4>
+        <div class="flex flex-col gap-2 text-gray-400 text-sm">
+          <a href="#home" class="hover:text-mainRed transition">Home</a>
+          <a href="#projects" class="hover:text-mainRed transition">Projects</a>
+          <a href="#contact" class="hover:text-mainRed transition">Contact</a>
+        </div>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="space-y-4">
+        <h4 class="text-white font-semibold tracking-wide">
+          Connect With Me
+        </h4>
+
+        <div class="flex justify-center md:justify-start gap-5">
+
+          <a href="https://github.com/naufalnfff" target="_blank"
+            class="w-11 h-11 flex items-center justify-center
+                   rounded-full border border-white/10
+                   bg-white/5 backdrop-blur-md
+                   text-mainRed hover:bg-mainRed hover:text-black
+                   hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]
+                   transition duration-300">
+            <i class="bx bxl-github text-xl"></i>
+          </a>
+
+          <a href="https://wa.me/6281914822580" target="_blank"
+            class="w-11 h-11 flex items-center justify-center
+                   rounded-full border border-white/10
+                   bg-white/5 backdrop-blur-md
+                   text-mainRed hover:bg-mainRed hover:text-black
+                   hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]
+                   transition duration-300">
+            <i class="bx bxl-whatsapp text-xl"></i>
+          </a>
+
+          <a href="https://tiktok.com/@naufallnfff_" target="_blank"
+            class="w-11 h-11 flex items-center justify-center
+                   rounded-full border border-white/10
+                   bg-white/5 backdrop-blur-md
+                   text-mainRed hover:bg-mainRed hover:text-black
+                   hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]
+                   transition duration-300">
+            <i class="bx bxl-tiktok text-xl"></i>
+          </a>
+
+          <a href="https://instagram.com/naufallnfff_" target="_blank"
+            class="w-11 h-11 flex items-center justify-center
+                   rounded-full border border-white/10
+                   bg-white/5 backdrop-blur-md
+                   text-mainRed hover:bg-mainRed hover:text-black
+                   hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]
+                   transition duration-300">
+            <i class="bx bxl-instagram text-xl"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="border-t border-white/10 my-10"></div>
+
+    <!-- COPYRIGHT -->
+    <div class="text-center text-gray-500 text-sm">
+      © <span id="year"></span> Naufallnfff_. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
+
+<!-- Typing Animation Script -->
+<script>
+const words = ["Frontend Designer","Web Designer","UI / UX Designer","Web Developer","Software Tester"];
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+const typing = document.getElementById("typing");
+
+function type() {
+  currentWord = words[i];
+  if (isDeleting) {
+    typing.textContent = currentWord.substring(0, j--);
+  } else {
+    typing.textContent = currentWord.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentWord.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+    setTimeout(type, 300);
+  } else {
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+}
+type();
+</script>
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuIcon.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    // Ganti icon jadi X saat terbuka
+    menuIcon.classList.toggle("bx-menu");
+    menuIcon.classList.toggle("bx-x");
+  });
+
+  // Tutup menu saat klik link
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuIcon.classList.add("bx-menu");
+      menuIcon.classList.remove("bx-x");
+    });
+  });
+</script>
+
+</body>
+</html>
