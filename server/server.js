@@ -1,33 +1,16 @@
-require("dotenv").config();
 const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-const rateLimit = require("express-rate-limit");
 const path = require("path");
-const connectDB = require("./config/db");
 
 const app = express();
 
-connectDB();
+app.use(express.static(__dirname));
 
-app.use(cors());
-app.use(express.json());
-app.use(helmet());
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
-// Rate limit
-app.use(
-  rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 100,
-  })
-);
+const PORT = process.env.PORT || 3000;
 
-// API routes
-app.use("/api/contact", require("./routes/contactRoutes"));
-
-// Serve frontend
-app.use(express.static(path.join(__dirname, "../public")));
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
