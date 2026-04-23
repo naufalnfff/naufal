@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Futsal Hobby</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <script>
     tailwind.config = {
@@ -20,197 +24,227 @@
   </script>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white selection:bg-mainRed/30">
 
-<!-- CONTAINER -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-[6%] py-16 md:py-24">
+<div class="max-w-6xl mx-auto px-4 py-16">
 
   <!-- FRAME -->
-  <div class="border border-mainRed/20 rounded-3xl p-6 md:p-12 
-              bg-gradient-to-b from-black/70 to-black/30 
-              shadow-[0_0_60px_rgba(246,11,11,0.15)] backdrop-blur-xl">
+  <div class="relative border border-mainRed/20 rounded-3xl p-6 md:p-10 
+              bg-gradient-to-b from-black/80 to-black/40 
+              shadow-[0_0_80px_rgba(246,11,11,0.15)] backdrop-blur-xl overflow-hidden">
+
+    <!-- GLOW -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[400px] h-[400px] 
+                bg-mainRed/10 blur-[120px] rounded-full"></div>
 
     <!-- BACK -->
     <a href="index.html"
-       class="text-mainRed mb-8 inline-flex items-center gap-2 hover:gap-3 transition">
+       class="relative z-10 text-mainRed mb-6 inline-flex items-center gap-2 hover:gap-3 transition">
       ← Back
     </a>
 
-    <!-- HEADER -->
-    <div class="mb-12 max-w-3xl">
-      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
-        Futsal & Sepak Bola
-      </h1>
-      <div class="w-24 h-1 bg-mainRed rounded mb-6"></div>
+    <!-- TITLE -->
+    <h1 class="relative z-10 text-3xl md:text-5xl font-bold mb-4">
+      Futsal & Sepak Bola
+    </h1>
 
-      <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-        Futsal & Sepak Bola bukan hanya olahraga, tapi juga cara saya membangun 
-        teamwork, strategi, dan kebersamaan dengan teman-teman. 
-        Setiap pertandingan selalu membawa pengalaman baru dan meningkatkan skill.
-      </p>
-    </div>
+    <!-- DESC -->
+    <p class="relative z-10 text-gray-400 mb-10 max-w-2xl">
+      Futsal & Sepak Bola adalah hobi yang melatih teamwork, strategi, dan kebersamaan.
+    </p>
 
-    <!-- STATS -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+    <!-- SLIDER -->
+    <div class="swiper mySwiper relative z-10">
 
-      <div class="stat-card">
-        <h3>20+</h3>
-        <p>Teman Tim</p>
-      </div>
+      <div class="swiper-wrapper">
 
-      <div class="stat-card">
-        <h3>90%</h3>
-        <p>Kesenangan</p>
-      </div>
-
-      <div class="stat-card">
-        <h3>5+</h3>
-        <p>Lapangan</p>
-      </div>
-
-      <div class="stat-card">
-        <h3>∞</h3>
-        <p>Pengalaman</p>
-      </div>
-
-    </div>
-
-    <!-- GALERI HEADER -->
-    <div class="mb-10">
-      <h2 class="text-2xl sm:text-3xl font-semibold mb-2">
-        Galeri Futsal
-      </h2>
-      <div class="w-20 h-1 bg-mainRed rounded"></div>
-    </div>
-
-    <!-- GALERI GRID -->
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-      <!-- ITEM -->
-      <div class="gallery-card">
-        <img src="images/futsal (4).jpeg">
-        <div class="overlay"></div>
-        <div class="text">
-          <h3>Latihan Tim</h3>
-          <p>Melatih kekompakan dan strategi</p>
+        <!-- ITEM -->
+        <div class="swiper-slide">
+          <div class="gallery-card">
+            <img src="images/futsal (4).jpeg">
+            <div class="overlay"></div>
+            <div class="text">
+              <h3>Latihan Tim</h3>
+              <p>Melatih kekompakan dan strategi</p>
+            </div>
+          </div>
         </div>
+
+        <div class="swiper-slide">
+          <div class="gallery-card">
+            <img src="images/futsal (2).jpeg">
+            <div class="overlay"></div>
+            <div class="text">
+              <h3>Pertandingan</h3>
+              <p>Kompetitif dan penuh semangat</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="gallery-card">
+            <img src="images/futsal (3).jpeg">
+            <div class="overlay"></div>
+            <div class="text">
+              <h3>Kebersamaan</h3>
+              <p>Momen seru bersama tim</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- ITEM -->
-      <div class="gallery-card">
-        <img src="images/futsal (2).jpeg">
-        <div class="overlay"></div>
-        <div class="text">
-          <h3>Pertandingan</h3>
-          <p>Kompetitif dan penuh semangat</p>
-        </div>
-      </div>
+      <!-- NAV BUTTON -->
+      <div class="swiper-button-next custom-nav"></div>
+      <div class="swiper-button-prev custom-nav"></div>
 
-      <!-- ITEM -->
-      <div class="gallery-card">
-        <img src="images/futsal (3).jpeg">
-        <div class="overlay"></div>
-        <div class="text">
-          <h3>Kebersamaan</h3>
-          <p>Momen seru bersama tim</p>
-        </div>
-      </div>
+      <!-- DOT -->
+      <div class="swiper-pagination mt-4"></div>
 
     </div>
 
   </div>
 </div>
 
-<!-- STYLE -->
 <style>
 
-/* STAT */
-.stat-card {
-  background: rgba(0,0,0,0.5);
-  border: 1px solid rgba(246,11,11,0.2);
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.stat-card h3 {
-  color: #f60b0b;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.stat-card p {
-  color: #aaa;
-  font-size: 13px;
-  margin-top: 6px;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 0 25px rgba(246,11,11,0.3);
-}
-
-/* GALERI */
+/* CARD */
 .gallery-card {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  cursor: pointer;
+  border-radius: 24px;
 }
 
 .gallery-card img {
   width: 100%;
   height: 260px;
   object-fit: cover;
-  transition: 0.5s;
 }
 
-/* hover zoom */
-.gallery-card:hover img {
-  transform: scale(1.1);
+@media (min-width: 640px) {
+  .gallery-card img {
+    height: 380px;
+  }
 }
 
-/* overlay */
+@media (min-width: 1024px) {
+  .gallery-card img {
+    height: 500px;
+  }
+}
+
+/* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, black, transparent);
-  opacity: 0.4;
-  transition: 0.4s;
+  opacity: 0.6;
 }
 
-.gallery-card:hover .overlay {
-  opacity: 0.8;
-}
-
-/* text */
+/* TEXT */
 .text {
   position: absolute;
   bottom: 0;
-  padding: 16px;
-  transform: translateY(40px);
-  opacity: 0;
-  transition: 0.4s;
+  padding: 20px;
 }
 
 .text h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .text p {
-  font-size: 12px;
+  font-size: 14px;
   color: #ccc;
 }
 
-/* muncul saat hover */
-.gallery-card:hover .text {
-  transform: translateY(0);
-  opacity: 1;
+/* NAV BUTTON */
+.custom-nav {
+  width: 45px;
+  height: 45px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(246,11,11,0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+/* icon */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  color: #f60b0b;
+}
+
+/* hover */
+.custom-nav:hover {
+  transform: scale(1.1);
+  background: rgba(246,11,11,0.2);
+  box-shadow: 0 0 20px rgba(246,11,11,0.4);
+}
+
+/* posisi */
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+  .custom-nav {
+    width: 35px;
+    height: 35px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 12px;
+  }
+
+  .swiper-button-next {
+    right: 5px;
+  }
+
+  .swiper-button-prev {
+    left: 5px;
+  }
+}
+
+/* DOT */
+.swiper-pagination-bullet {
+  background: #666;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f60b0b;
 }
 
 </style>
+
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  grabCursor: true,
+  speed: 600,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+</script>
 
 </body>
 </html>

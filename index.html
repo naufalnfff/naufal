@@ -624,57 +624,65 @@
 }
 
 </style>
+
 <!-- SKILLS -->
-<section id="skills" class="min-h-screen px-[8%] md:px-[10%] py-24 bg-gradient-to-b from-secondDark to-black overflow-hidden">
+<section id="skills" class="px-[8%] md:px-[10%] py-16 bg-gradient-to-b from-secondDark to-black">
 
   <!-- TITLE -->
-  <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
+  <h2 class="text-3xl md:text-5xl font-bold text-center mb-12">
     <span class="text-mainRed">Skills</span>
   </h2>
 
   <!-- WRAPPER -->
   <div class="relative max-w-6xl mx-auto">
 
-    <!-- BUTTON LEFT -->
-    <button id="prevBtn" 
-      class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-mainRed transition px-4 py-3 rounded-full">
-      ❮
-    </button>
-
-    <!-- BUTTON RIGHT -->
-    <button id="nextBtn" 
-      class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-mainRed transition px-4 py-3 rounded-full">
-      ❯
-    </button>
+    <!-- BUTTON -->
+    <button id="prevBtn" class="nav-btn left-0">❮</button>
+    <button id="nextBtn" class="nav-btn right-0">❯</button>
 
     <!-- SLIDER -->
     <div id="skillsSlider" 
-      class="flex gap-8 overflow-x-auto scroll-smooth px-12 scrollbar-hide">
+      class="flex gap-6 overflow-x-auto scroll-smooth px-10 scrollbar-hide">
 
       <!-- ITEM -->
-      <div class="skill-card">
-        <i class='bx bxl-html5 text-6xl text-orange-500'></i>
+      <div class="skill-card html">
+        <i class='bx bxl-html5 icon'></i>
         <h3>HTML</h3>
       </div>
 
-      <div class="skill-card">
-        <i class='bx bxl-css3 text-6xl text-blue-500'></i>
+      <div class="skill-card css">
+        <i class='bx bxl-css3 icon'></i>
         <h3>CSS</h3>
       </div>
 
-      <div class="skill-card">
-        <i class='bx bxl-javascript text-6xl text-yellow-400'></i>
+      <div class="skill-card js">
+        <i class='bx bxl-javascript icon'></i>
         <h3>JavaScript</h3>
       </div>
 
-      <div class="skill-card">
-        <i class='bx bxl-git text-6xl text-red-500'></i>
+      <div class="skill-card git">
+        <i class='bx bxl-git icon'></i>
         <h3>Git</h3>
       </div>
 
-      <div class="skill-card">
-        <i class='bx bxl-flutter text-6xl text-cyan-400'></i>
+      <div class="skill-card flutter">
+        <i class='bx bxl-flutter icon'></i>
         <h3>Flutter</h3>
+      </div>
+
+      <div class="skill-card php">
+        <i class='bx bxl-php icon'></i>
+        <h3>PHP</h3>
+      </div>
+
+      <div class="skill-card mysql">
+        <i class='bx bx-data icon'></i>
+        <h3>MySQL</h3>
+      </div>
+
+      <div class="skill-card python">
+        <i class='bx bxl-python icon'></i>
+        <h3>Python</h3>
       </div>
 
     </div>
@@ -686,39 +694,88 @@
 <!-- STYLE -->
 <style>
 
-/* CARD LEBIH BESAR */
+/* CARD */
 .skill-card {
-  min-width: 220px;
-  height: 180px;
+  min-width: 200px;
+  height: 160px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 10px;
 
-  padding: 30px;
-  border-radius: 20px;
+  padding: 20px;
+  border-radius: 18px;
 
-  background: rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(20,20,20,0.8);
+  border: 1px solid rgba(255,255,255,0.05);
 
   transition: 0.3s;
   flex-shrink: 0;
 }
 
+/* ICON */
+.icon {
+  font-size: 42px;
+}
+
 /* TEXT */
 .skill-card h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #eee;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .skill-card:hover {
-  transform: translateY(-8px) scale(1.05);
-  border-color: rgba(246,11,11,0.6);
-  box-shadow: 0 10px 30px rgba(246,11,11,0.2);
+  transform: translateY(-6px);
+}
+
+/* WARNA TIAP SKILL */
+.skill-card.html .icon { color: #ff6a00; }
+.skill-card.html:hover { box-shadow: 0 8px 25px rgba(255,106,0,0.3); }
+
+.skill-card.css .icon { color: #007bff; }
+.skill-card.css:hover { box-shadow: 0 8px 25px rgba(0,123,255,0.3); }
+
+.skill-card.js .icon { color: #ffd500; }
+.skill-card.js:hover { box-shadow: 0 8px 25px rgba(255,213,0,0.3); }
+
+.skill-card.git .icon { color: #ff2d2d; }
+.skill-card.git:hover { box-shadow: 0 8px 25px rgba(255,45,45,0.3); }
+
+.skill-card.flutter .icon { color: #00cfff; }
+.skill-card.flutter:hover { box-shadow: 0 8px 25px rgba(0,207,255,0.3); }
+
+.skill-card.php .icon { color: #6c63ff; }
+.skill-card.php:hover { box-shadow: 0 8px 25px rgba(108,99,255,0.3); }
+
+.skill-card.mysql .icon { color: #00c853; }
+.skill-card.mysql:hover { box-shadow: 0 8px 25px rgba(0,200,83,0.3); }
+
+.skill-card.python .icon { color: #ffcc00; }
+.skill-card.python:hover { box-shadow: 0 8px 25px rgba(255,204,0,0.3); }
+
+/* NAV BUTTON */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(246,11,11,0.3);
+
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(246,11,11,0.4);
+  transform: translateY(-50%) scale(1.1);
 }
 
 /* HIDE SCROLLBAR */
@@ -734,28 +791,28 @@
 
 <!-- SCRIPT BUTTON -->
 <script>
-
 const slider = document.getElementById('skillsSlider');
 const nextBtn = document.getElementById('nextBtn');
 const prevBtn = document.getElementById('prevBtn');
 
-// jarak geser (sesuaikan dengan ukuran card)
-const scrollAmount = 250;
+function getScrollAmount() {
+  const card = document.querySelector('.skill-card');
+  return card.offsetWidth + 24;
+}
 
-nextBtn.addEventListener('click', () => {
+nextBtn.onclick = () => {
   slider.scrollBy({
-    left: scrollAmount,
+    left: getScrollAmount(),
     behavior: 'smooth'
   });
-});
+};
 
-prevBtn.addEventListener('click', () => {
+prevBtn.onclick = () => {
   slider.scrollBy({
-    left: -scrollAmount,
+    left: -getScrollAmount(),
     behavior: 'smooth'
   });
-});
-
+};
 </script>
 
 <!-- CONTACT -->

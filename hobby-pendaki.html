@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mendaki Gunung</title>
 
   <!-- Tailwind -->
@@ -23,41 +24,45 @@
   </script>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white selection:bg-mainRed/30">
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-[6%] py-16 md:py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-[6%] py-14 md:py-24">
 
   <!-- FRAME -->
-  <div class="border border-mainRed/20 rounded-3xl p-6 md:p-12 
-              bg-gradient-to-b from-black/70 to-black/30 
-              shadow-[0_0_60px_rgba(246,11,11,0.15)] backdrop-blur-xl">
+  <div class="relative border border-mainRed/20 rounded-3xl p-5 sm:p-8 md:p-12 
+              bg-gradient-to-b from-black/80 to-black/40 
+              shadow-[0_0_80px_rgba(246,11,11,0.15)] backdrop-blur-xl overflow-hidden">
+
+    <!-- GLOW -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] 
+                bg-mainRed/10 blur-[150px] rounded-full"></div>
 
     <!-- BACK -->
     <a href="index.html"
-       class="text-mainRed mb-8 inline-flex items-center gap-2 hover:gap-3 transition">
+       class="relative z-10 text-mainRed mb-6 inline-flex items-center gap-2 hover:gap-3 transition text-sm sm:text-base">
       ← Back
     </a>
 
     <!-- TITLE -->
-    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
+    <h1 class="relative z-10 text-2xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
       Mendaki Gunung
     </h1>
 
     <!-- DESC -->
-    <p class="text-gray-400 max-w-2xl mb-12 text-sm sm:text-base leading-relaxed">
+    <p class="relative z-10 text-gray-400 max-w-2xl mb-10 text-sm sm:text-base leading-relaxed">
       Mendaki gunung adalah hobi yang melatih fisik dan mental serta memberikan pengalaman alam yang luar biasa.
     </p>
 
     <!-- HEADER -->
-    <div class="mb-8">
-      <h2 class="text-2xl sm:text-3xl font-semibold mb-2">
+    <div class="relative z-10 mb-6">
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
         Galeri Pendakian
       </h2>
-      <div class="w-20 h-1 bg-mainRed rounded"></div>
+      <div class="w-16 sm:w-20 h-[3px] bg-mainRed rounded"></div>
     </div>
 
     <!-- SLIDER -->
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper relative z-10">
 
       <div class="swiper-wrapper">
 
@@ -66,11 +71,9 @@
           <div class="card">
             <img src="images/merbabu.jpeg" class="img-slider">
             <div class="overlay"></div>
-
-            <!-- TEXT -->
             <div class="text-box">
               <h3>Gunung Merbabu</h3>
-              <p>View sabana yang luas & sunrise terbaik</p>
+              <p>View sabana luas & sunrise terbaik</p>
             </div>
           </div>
         </div>
@@ -110,11 +113,11 @@
 
       </div>
 
-      <!-- NAV -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- NAV (hidden di HP) -->
+      <div class="swiper-button-next !hidden sm:!flex"></div>
+      <div class="swiper-button-prev !hidden sm:!flex"></div>
 
-      <!-- DOTS -->
+      <!-- DOT -->
       <div class="swiper-pagination mt-6"></div>
 
     </div>
@@ -127,18 +130,23 @@
 <style>
 .img-slider {
   width: 100%;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
   transition: 0.5s;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .img-slider {
-    height: 300px;
+    height: 220px;
   }
 }
 
-/* CARD */
+@media (min-width: 1024px) {
+  .img-slider {
+    height: 260px;
+  }
+}
+
 .card {
   position: relative;
   overflow: hidden;
@@ -148,7 +156,7 @@
 
 /* hover zoom */
 .group:hover .img-slider {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 /* overlay */
@@ -161,46 +169,45 @@
 }
 
 .group:hover .overlay {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* TEXT BOX */
+/* TEXT */
 .text-box {
   position: absolute;
   bottom: 0;
-  padding: 20px;
-  transform: translateY(40px);
+  padding: 16px;
+  transform: translateY(30px);
   opacity: 0;
   transition: 0.4s;
 }
 
 .text-box h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .text-box p {
-  font-size: 13px;
+  font-size: 12px;
   color: #ccc;
 }
 
-/* muncul saat hover */
 .group:hover .text-box {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* active card */
+/* active */
 .group:hover .card {
-  transform: scale(1.03);
-  box-shadow: 0 0 30px rgba(246,11,11,0.3);
+  transform: scale(1.04);
+  box-shadow: 0 0 40px rgba(246,11,11,0.3);
 }
 
 /* swiper */
 .swiper-button-next,
 .swiper-button-prev {
   color: #f60b0b;
-  transform: scale(0.7);
+  transform: scale(0.8);
 }
 
 .swiper-pagination-bullet {
@@ -217,9 +224,8 @@
 
 <script>
 const swiper = new Swiper(".mySwiper", {
-  spaceBetween: 20,
+  spaceBetween: 16,
   grabCursor: true,
-  
 
   pagination: {
     el: ".swiper-pagination",
@@ -233,12 +239,13 @@ const swiper = new Swiper(".mySwiper", {
 
   breakpoints: {
     0: {
-      slidesPerView: 1.1,
+      slidesPerView: 1.2,
+      spaceBetween: 12
     },
-    640: {
+    480: {
       slidesPerView: 1.5,
     },
-    768: {
+    640: {
       slidesPerView: 2,
     },
     1024: {
